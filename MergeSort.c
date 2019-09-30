@@ -68,6 +68,12 @@ int main(void) {
     }
   }
 
+//Imprimindo
+  printf("\n[");
+  for (int i=0; i<quantidade; i++){
+    printf("%d ", vetor_principal[i]);
+  }
+  printf("]\n");
 
   return 0;
 }
