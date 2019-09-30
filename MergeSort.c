@@ -55,5 +55,19 @@ int main(void) {
     }
   }
 
+//Comparando os valores que foram divididos e agrupados, colocando em ordem crescente, passo final
+  int k = (quantidade/2) + 1;
+  for (int i=0; i!=k; i++){
+    for (k; k <=quantidade; k++){
+      if (vetor_auxiliar2[i] > vetor_auxiliar2[k]){
+        vetor_principal[i] = vetor_auxiliar2[k];
+      }
+      else{
+        vetor_principal[i] = vetor_auxiliar2[i];
+      }
+    }
+  }
+
+
   return 0;
 }
