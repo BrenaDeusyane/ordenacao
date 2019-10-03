@@ -38,8 +38,15 @@ int main(void){
     }
     aux++;
   }
-//Caso a primeira parte do vetor não tenha sido rodada inteira
+
+//Caso a primeira parte do vetor não tenha sido rodada completamente
   for(int i = com1; i <= meio; i++){
+    vetor_aux[aux] = vetor[i];
+    aux++;
+  }
+
+//Caso a segunda parte do vetor não tenha sido rodada completamente
+  for(int i = com2; i <= fim; i++){
     vetor_aux[aux] = vetor[i];
     aux++;
   }
@@ -47,9 +54,7 @@ int main(void){
   printf("\n[");
   for(int i=0; i<tam_vetor; i++){
     printf("%d ", vetor_aux[i]);
-  }
-  printf("]\n");
+  }  printf("]\n");
 
   return 0;
-
 }
