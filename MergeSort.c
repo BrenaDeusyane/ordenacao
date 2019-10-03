@@ -15,13 +15,11 @@ int main(void) {
     scanf("%d", &vetor_principal[i]);
   }
 // Colocando o menor valor do par, nos números pares
-  for(int i=0; i<quantidade/2; i++){
-    if(i%2==0){
-      if(vetor_principal[i] > vetor_principal[i+1]){
-        aux = vetor_principal[i];
-        vetor_principal[i] = vetor_principal[i+1];
-        vetor_principal[i+1] = aux;
-      }
+for(int i=0; i<quantidade-1; i=i+2){
+    if(vetor_principal[i] > vetor_principal[i+1]){
+      aux = vetor_principal[i];
+      vetor_principal[i] = vetor_principal[i+1];
+      vetor_principal[i+1] = aux;
     }
   }
 
