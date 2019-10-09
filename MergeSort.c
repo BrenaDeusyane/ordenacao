@@ -26,35 +26,4 @@ int main(void){
     printf("\nInsira o %d° valor inteiro:\n", i+1);
     scanf("%d", &vetor[i]);
   }
-
-//Comparando o inicio do vetor, com meio do vetor em diante e colocando no vetor auxiliar
-  while(  (com1 <= meio) && (com2 <= fim) ){
-    if (vetor[com1] < vetor[com2]){
-      vetor_aux[aux] = vetor[com1];
-      com1++;
-    }else{
-      vetor_aux[aux] = vetor[com2];
-      com2++;
-    }
-    aux++;
-  }
-
-//Caso a primeira parte do vetor não tenha sido rodada completamente
-  for(int i = com1; i <= meio; i++){
-    vetor_aux[aux] = vetor[i];
-    aux++;
-  }
-
-//Caso a segunda parte do vetor não tenha sido rodada completamente
-  for(int i = com2; i <= fim; i++){
-    vetor_aux[aux] = vetor[i];
-    aux++;
-  }
-
-  printf("\n[");
-  for(int i=0; i<tam_vetor; i++){
-    printf("%d ", vetor_aux[i]);
-  }  printf("]\n");
-
-  return 0;
 }
